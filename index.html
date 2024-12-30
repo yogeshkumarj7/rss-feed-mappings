@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSS Feed Mappings</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="mainPage" class="container">
+      <header>
+        <div class="header-text">
+          <h1>RSS Feed Mappings</h1>
+          <p class="subtitle">Manage your RSS to Airtable mappings</p>
+        </div>
+        <button id="newMappingBtn" class="new-btn">
+          <i class="fas fa-plus"></i>
+          New Mapping
+        </button>
+      </header>
+      <main>
+        <div class="empty-state">
+          <i class="fas fa-folder-open fa-3x empty-icon"></i>
+          <p>No mappings created yet</p>
+          <p>Click "New Mapping" to get started</p>
+        </div>
+      </main>
+    </div>
+
+    <div id="newMappingPage" class="container hidden">
+      <div class="back-nav">
+        <button id="backBtn" class="back-link">
+          <i class="fas fa-arrow-left"></i> Back to Mappings
+        </button>
+      </div>
+      <div class="form-container">
+        <h2>Create New Mapping</h2>
+        <form id="mappingForm">
+          <div class="form-group">
+            <label for="configName">Configuration Name</label>
+            <input
+              type="text"
+              id="configName"
+              placeholder="Enter config name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="rssUrl">RSS Feed URL</label>
+            <input
+              type="url"
+              id="rssUrl"
+              placeholder="Enter RSS feed URL"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="baseId">Airtable Base ID</label>
+            <input
+              type="text"
+              id="baseId"
+              placeholder="Enter base ID"
+              required
+            />
+          </div>
+          <button type="button" id="parseBtn" class="parse-btn">
+            <i class="fas fa-sync"></i> Parse Feed
+          </button>
+
+          <div class="map-fields-section">
+            <h3>Map Fields</h3>
+            <div id="fieldMappings" class="field-mappings"></div>
+            <button type="button" id="addFieldBtn" class="add-field-btn">
+              <i class="fas fa-plus"></i> Add Field Mapping
+            </button>
+          </div>
+
+          <button type="submit" class="save-btn">
+            <i class="fas fa-save"></i> Save Mapping
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="successMessage" class="success-message">
+      <i class="fas fa-check-circle"></i> RSS feed parsed successfully.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
