@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="mainPage" class="container">
+    <div id="mainPage" class="container no-scrollbar">
       <header>
         <div class="header-text">
           <h1>RSS Feed Mappings</h1>
@@ -35,7 +35,7 @@
       </main>
     </div>
 
-    <div id="newMappingPage" class="container hidden">
+    <div id="newMappingPage" class="container hidden compact-layout">
       <div class="back-nav">
         <button id="backBtn" class="back-link">
           <i class="fas fa-arrow-left"></i> Back to Mappings
@@ -71,21 +71,24 @@
               required
             />
           </div>
-          <button type="button" id="parseBtn" class="parse-btn">
+          <button type="button" id="parseBtn" class="parse-btn full-width">
             <i class="fas fa-sync"></i> Parse Feed
           </button>
 
           <div class="map-fields-section">
             <h3>Map Fields</h3>
             <div id="fieldMappings" class="field-mappings"></div>
-            <button type="button" id="addFieldBtn" class="add-field-btn">
+
+            <button
+              type="button"
+              id="addFieldBtn"
+              class="add-field-btn full-width"
+            >
               <i class="fas fa-plus"></i> Add Field Mapping
             </button>
           </div>
 
-          <button type="submit" class="save-btn">
-            <i class="fas fa-save"></i> Save Mapping
-          </button>
+          <button type="submit" class="save-btn">Save Mapping</button>
         </form>
       </div>
     </div>
