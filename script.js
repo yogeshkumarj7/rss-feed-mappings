@@ -68,14 +68,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return row;
   }
-  // Changes to do
 
   document.getElementById("backBtn").addEventListener("click", () => {
     newMappingPage.classList.add("hidden");
     mainPage.classList.remove("hidden");
   });
-
-  // Change above
 
   function showSuccessMessage(message) {
     successMessageText.textContent = message;
@@ -118,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
                       <button class="edit-btn" data-id="${mapping.id}">
                           <i class="fas fa-edit edit-icon"></i> 
                       </button>
-                      <button class="delete-btn" data-id="${mapping.id}">
+                      <button class="delete-btn-main" data-id="${mapping.id}">
                           <i class="fas fa-trash"></i> 
                       </button>
                   </div>
@@ -129,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
         editMapping(mapping);
       });
 
-      tr.querySelector(".delete-btn").addEventListener("click", () => {
+      tr.querySelector(".delete-btn-main").addEventListener("click", () => {
         showDeleteModal(mapping.id);
       });
 

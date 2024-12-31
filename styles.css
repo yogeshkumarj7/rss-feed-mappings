@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    background: linear-gradient(110deg, #f0f4f8, #d9e2ec);
     color: #000;
     height: 100%;
     line-height: 1.4;
@@ -47,7 +48,7 @@ header {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background: #000;
+    background: teal;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -60,7 +61,7 @@ header {
 }
 
 .new-btn:hover {
-    background: #333;
+    background: rgb(1, 101, 101);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -93,7 +94,7 @@ header {
     align-items: center;
     gap: 0.5rem;
     margin-top: 0.75rem;
-    background: #000;
+    background: teal;
     color: white;
     border: none;
     padding: 0.75rem;
@@ -107,7 +108,7 @@ header {
 }
 
 .back-link:hover {
-    background: #111;
+    background: rgb(0, 101, 101);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -157,7 +158,7 @@ header {
     align-items: center;
     gap: 0.5rem;
     margin-top: 0.75rem;
-    background: #000;
+    background: teal;
     color: white;
     border: none;
     padding: 8px;
@@ -170,7 +171,7 @@ header {
 }
 
 .parse-btn:hover {
-    background: #111;
+    background: rgb(1, 101, 101);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -178,7 +179,7 @@ header {
     margin-top: 0.75rem;
     padding: 0.75rem;
     width: 100%;
-    background: #000;
+    background: teal;
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -190,7 +191,7 @@ header {
 }
 
 .save-btn:hover {
-    background: #111;
+    background: rgb(1, 101, 101);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -311,8 +312,13 @@ header {
     color: #4a5568;
 }
 
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
 .edit-btn,
-.delete-btn {
+.delete-btn-main {
     padding: 0.3rem;
     border: none;
     border-radius: 6px;
@@ -321,24 +327,13 @@ header {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    color: black;
+    /* background: none; */
 }
 
-.edit-btn {
-    background: green;
-    color: white;
-}
-
-.edit-btn:hover {
-    background: #333;
-}
-
-.delete-btn {
-    background: #dc2626;
-    color: white;
-}
-
-.delete-btn:hover {
-    background: #333;
+.edit-btn:hover,
+.delete-btn-main:hover {
+    background: #cccccc;
 }
 
 .mappings-table-container {
@@ -383,9 +378,6 @@ header {
 
 
 }
-
-/* Delete modal */
-
 .modal {
     position: fixed;
     top: 0;
@@ -457,4 +449,22 @@ header {
 
 .cancel-btn:hover {
     background-color: #bbb;
+}
+
+.field-mapping-row button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: black;
+    transition: transform 0.2s ease;
+}
+
+.field-mapping-row button:hover {
+    transform: scale(1.1);
+}
+
+.cancel-btn i,
+.delete-btn i {
+    color: black;
 }
